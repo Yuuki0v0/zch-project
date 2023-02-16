@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<!--    <h1>摄像头</h1>-->
+    <img src="{{ url_for('video_feed') }}" width="380" height="320" id="test1">
+    <img src="data:;base64,{{ img_stream2 }}" width="380" height="320" id="test2">
+    <img src="data:;base64,{{ img_stream3 }}" width="380" height="320" id="test3">
+    <form action="{{ url_for('recognition_temp')}}" method="post">
+        <button type="submit">识别测温:</button>{{ temperature }}
+    </form>
+    <form action="{{ url_for('handle')}}" method="post">
+        <button type="submit">手动模式:</button>{{ handle }}
+    </form>
+</div>
+
+<div align="center">
+    <h2>声音识别预测1</h2>
+    <form action="{{ url_for('Browse')}}" method="post">
+        <button type="submit">浏览:</button>{{ file_path }}
+    </form>
+</div>
+
+<div align="center">
+    <form action="{{ url_for('predict')}}" method="post">
+        <button type="submit">预测1</button>{{ prediction_display_area1 }}
+    </form>
+</div>
+
+</body>
+</html>

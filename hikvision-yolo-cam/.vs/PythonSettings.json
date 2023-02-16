@@ -1,0 +1,5 @@
+{
+  "TestFramework": "Pytest",
+  "SuppressConfigureTestFrameworkPrompt": "true",
+  "Interpreter": "E:\\PyCharm\\location\\pythonProject3.9\\Scripts\\python.exe"
+}
